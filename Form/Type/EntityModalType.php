@@ -28,7 +28,7 @@ class EntityModalType extends AbstractType
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
 
-        $view->vars['modal_uri'] = $this->router->generate('xdu_modal_entity_tree', array(
+        $view->vars['modal_uri'] = $this->router->generate('entity_modal', array(
             'repository' => $options['entity_repository'],
             'labels' => implode(',', $options['entity_label']),
             'classes' => implode(',', $options['entity_classes']),
