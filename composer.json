@@ -1,7 +1,7 @@
 {
   "name": "xaifiet/entity-modal",
   "type": "symfony-bundle",
-  "description": "Symfony EmtityModalBundle",
+  "description": "Symfony EntityModalBundle",
   "keywords": ["Form"],
   "authors": [
     {
