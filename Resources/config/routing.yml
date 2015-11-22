@@ -1,3 +1,3 @@
-xdu_modal_entity_tree:
+entity_modal:
     path:     /modal_entity_tree
     defaults: { _controller: XDUModalEntityBundle:ModalEntityTree:modal }

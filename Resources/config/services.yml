@@ -1,6 +1,6 @@
 services:
 
-    xdu_modal_entity.form_type.modal_entity_type:
+    entity_modal.form_type.entity_modal_type:
         class: EntityModalBundle\Form\Type\EntityModalType
         arguments:
             - @service_container
