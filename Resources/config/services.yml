@@ -1,0 +1,9 @@
+services:
+
+    xdu_modal_entity.form_type.modal_entity_type:
+        class: EntityModalBundle\Form\Type\EntityModalType
+        arguments:
+            - @service_container
+            - @doctrine
+        tags:
+            - { name: form.type, alias: entity_modal }

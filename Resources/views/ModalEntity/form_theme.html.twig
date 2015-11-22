@@ -1,0 +1,19 @@
+{% block modal_entity_widget %}
+    {% spaceless %}
+        <div class="input-group input-group-sm">
+            {{ form_widget(form.id) }}
+            {{ form_widget(form.name) }}
+            <span class="input-group-btn">
+                <a class="btn btn-info btn-flat" href="{{ form.vars.modal_uri }}" data-toggle="modal" data-target="#{{ form.vars.id }}-modal">Select Parent</a>
+                {% if not form.vars.required %}
+                    <a class="btn btn-danger btn-flat" href="#" data-input="">Empty</a>
+                {% endif %}
+            </span>
+        </div>
+        <div id="{{ form.vars.id }}-modal" class="modal fade modalEntityTree" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-id="{{ form.id.vars.id }}" data-name="{{ form.name.vars.id }}">
+            <div class="modal-dialog">
+                <div class="modal-content"></div>
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock %}

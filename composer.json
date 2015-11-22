@@ -1,0 +1,15 @@
+{
+  "name": "xaifiet/entity-modal",
+  "type": "symfony-bundle",
+  "description": "Symfony EmtityModalBundle",
+  "keywords": ["Form"],
+  "authors": [
+    {
+      "name": "Xavier DUBREUIL",
+      "email": "xav.dubreuil@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "EntityModalBundle\\": "" }
+  }
+}

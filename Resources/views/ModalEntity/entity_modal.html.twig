@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Modal</title>
+</head>
+<body>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Parent Selection</h4>
+</div>
+<div class="modal-body">
+    <table class="table table-bordered treegrid">
+        <tbody>
+        {% for treenode in nodes %}
+            <tr class="treegrid-{{ treenode.id }}{% if treenode.parent != null %} treegrid-parent-{{ treenode.parent.id }}{% endif %}{% if treenode.id == current %} tree-activate{% endif %}">
+                <td>
+                    {% if treenode.icon is defined %}<i class="{{ treenode.icon }}"></i>{% endif %}
+                    <span class="tree-space"><a href="#" class="modalentityitem" data-id="{{ treenode.id }}" data-name="{{ treenode.name }}">{{ treenode.name }}</a></span>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+</div>
+</body>
+</html>
